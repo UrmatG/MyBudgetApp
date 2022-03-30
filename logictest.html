@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="logictest.css">
+    <title>Expense Tracking App</title>
+</head>
+<body>
+    <div class="wholething">
+        <p class="label">Balance:</p>
+        <p id="balance">0</p>
+        <button id="add-expense" class="add expense-button">Add Expense</button>
+        <button id="add-income" class="add income-button">Add Income</button>
+        <br><br>
+        <div id="record-journal">
+            <!-- <div class="recordRow">
+                <div class="amount green">46000</div><div class="description">Salary</div>
+                <div class="deleteRow" onclick="deleteRow(this)">X</div>
+            </div> -->
+        </div>
+
+    </div>
+
+<!-- 'Add Expense' Modal Start -->
+    <div id="addExpenseModal" class="modal">
+
+        <div class="modalContent">
+            <form id="expForm" method="post">
+                <label for="expAmount">Amount of expense:</label><br>
+                <input type="number" min="1" id="expAmount" name="expAmount"><br><br>
+                <label for="expCaption">Expense description:</label><br>
+                <input type="text" id="expCaption" name="expCaption"><br><br>
+                <input type="button" value="Submit" onclick="addExpense()">
+            </form>
+            <p class="closeButton">Cancel</p>
+        </div>
+
+    </div>
+<!-- 'Add Expense' Modal End -->
+
+<!-- 'Add Income' Modal Start -->
+<div id="addIncomeModal" class="modal">
+
+    <div class="modalContent">
+        <form id="incForm" method="post">
+            <label for="incAmount">Amount of income:</label><br>
+            <input type="number" min="1" id="incAmount" name="incAmount"><br><br>
+            <label for="incCaption">Income description:</label><br>
+            <input type="text" id="incCaption" name="incCaption"><br><br>
+            <input type="button" value="Submit" onclick="addIncome()">
+        </form>
+        <p class="closeButton">Cancel</p>
+    </div>
+
+</div>
+<!-- 'Add Income' Modal End -->
+
+    <script src="logictest.js"></script>
+</body>
+</html>
